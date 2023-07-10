@@ -1,0 +1,24 @@
+{% extends "navigation.html" %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css" href="../static/stylesheets/recipes.css">
+{% endblock %}
+
+{% block content%}
+<div class="main-div">
+    <div class="two-thirds">
+        <div class="content-div">
+            <div class="text">Vind hier wereldse recepten</div>
+            <div class="input-container">
+                <input type="text" class="input" placeholder="Search">
+                <button class="button">
+                    <i class="button-icon">&#128269;</i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="one-third">
+        <!-- Content for the one-third section -->
+    </div>
+</div>
+{% endblock %}

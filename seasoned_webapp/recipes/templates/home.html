@@ -1,1 +1,29 @@
-<h1>Hello world!</h1>
+{% extends "navigation.html" %}
+
+{% block link %}
+<link rel="stylesheet" type="text/css" href="../static/stylesheets/home.css">
+{% endblock %}
+
+{% block content%}
+<div class="carousel">
+    <img class="carousel-image" src="../static/images/pic1.jpg" alt="Image 1">
+    <img class="carousel-image" src="../static/images/pic2.jpg" alt="Image 2">
+    <img class="carousel-image" src="../static/images/pic3.jpg" alt="Image 3">
+    <img class="carousel-image" src="../static/images/pic4.jpg" alt="Image 4">
+    <div class="carousel-text">
+        Bringing food of the world to your kitchen
+    </div>
+</div>
+
+<script>
+    // JavaScript code to implement carousel functionality
+    const carouselImages = document.querySelectorAll('.carousel-image');
+    let currentIndex = 0;
+
+    setInterval(() => {
+        carouselImages[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % carouselImages.length;
+        carouselImages[currentIndex].style.display = 'block';
+    }, 3000);
+</script>
+{% endblock %}
