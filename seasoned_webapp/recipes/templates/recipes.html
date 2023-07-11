@@ -6,19 +6,82 @@
 
 {% block content%}
 <div class="main-div">
-    <div class="two-thirds">
-        <div class="content-div">
-            <div class="text">Vind hier wereldse recepten</div>
-            <div class="input-container">
-                <input type="text" class="input" placeholder="Search">
-                <button class="button">
-                    <i class="button-icon">&#128269;</i>
+    <div class="large">
+        <div class="search-div">
+            <div class="text">Vind hier al je wereldse recepten</div>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search">
+                <button class="search-button">
+                    <i class="search-button-icon">🔍</i>
                 </button>
             </div>
         </div>
     </div>
-    <div class="one-third">
-        <!-- Content for the one-third section -->
+    <div class="small">
+        <div class="carousel-div">
+            <img class="carousel carousel-image" src="../static/images/pic1.jpg" alt="Image 1">
+            <img class="carousel carousel-image" src="../static/images/pic2.jpg" alt="Image 2">
+            <img class="carousel carousel-image" src="../static/images/pic3.jpg" alt="Image 3">
+            <img class="carousel carousel-image" src="../static/images/pic4.jpg" alt="Image 4">
+            <div class="carousel-text">
+                Bringing food of the world to your kitchen
+            </div>
+        </div>
     </div>
 </div>
+<div class="main-div">
+    <div class="small">
+        <div class="carousel-div">
+            <img class="carousel carousel-natl" src="../static/images/pic1.jpg" alt="Image 5">
+            <img class="carousel carousel-natl" src="../static/images/pic2.jpg" alt="Image 6">
+            <img class="carousel carousel-natl" src="../static/images/pic3.jpg" alt="Image 7">
+            <img class="carousel carousel-natl" src="../static/images/pic4.jpg" alt="Image 8">
+            <div class="carousel-text">
+                Nationaliteit
+            </div>
+        </div>
+    </div>
+    <div class="large">
+        <div class="list-div">
+            <h2 class="header">Centered Top Text</h2>
+            <div class="lists">
+                <ul class="list">
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                    <li>List Item 5</li>
+                </ul>
+                <ul class="list">
+                    <li>List Item 6</li>
+                    <li>List Item 7</li>
+                    <li>List Item 8</li>
+                    <li>List Item 9</li>
+                    <li>List Item 10</li>
+                </ul>
+            </div>
+            <div class="bottom-right">
+                Text Aligned Right (Bottom Right Corner)
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // JavaScript code to implement carousel functionality
+    const carouselImages = document.querySelectorAll('.carousel-image');
+    const carouselNatl = document.querySelectorAll('.carousel-natl');
+    let currentIndex = 0;
+    carouselImages[currentIndex].style.display = 'block';
+    carouselNatl[currentIndex].style.display = 'block';
+
+    setInterval(() => {
+        carouselImages[currentIndex].style.display = 'none';
+        carouselNatl[currentIndex].style.display = 'none';
+        currentIndex = (currentIndex + 1) % carouselImages.length;
+        carouselImages[currentIndex].style.display = 'block';
+        carouselNatl[currentIndex].style.display = 'block';
+    }, 6000);
+</script>
 {% endblock %}

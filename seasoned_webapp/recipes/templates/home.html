@@ -19,6 +19,7 @@
     // JavaScript code to implement carousel functionality
     const carouselImages = document.querySelectorAll('.carousel-image');
     let currentIndex = 0;
+    carouselImages[currentIndex].style.display = 'block';
 
     setInterval(() => {
         carouselImages[currentIndex].style.display = 'none';
