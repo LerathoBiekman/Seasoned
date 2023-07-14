@@ -1,30 +1,80 @@
-{% extends "navigation.html" %}
-
-{% block link %}
-<link rel="stylesheet" type="text/css" href="../static/stylesheets/home.css">
-{% endblock %}
-
-{% block content%}
-<div class="carousel">
-    <img class="carousel-image" src="../static/images/pic1.jpg" alt="Image 1">
-    <img class="carousel-image" src="../static/images/pic2.jpg" alt="Image 2">
-    <img class="carousel-image" src="../static/images/pic3.jpg" alt="Image 3">
-    <img class="carousel-image" src="../static/images/pic4.jpg" alt="Image 4">
-    <div class="carousel-text">
-        Bringing food of the world to your kitchen
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navigation Bar Example</title>
+    <link rel="stylesheet" type="text/css" href="../static/stylesheets/home.css">
+</head>
+<body>
+<div class="main-div">
+    <div class="large">
+        <div class="title-div center">
+            <h1>Seasoned</h1>
+        </div>
+        <div class="subtitle-div center">
+            <a>Wereldse recepten voor in jouw keuken</a>
+        </div>
+        <div class="search-bar-div center">
+            <div class="search-text center">
+                <a>Zoek hier naar een werelds recept.</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+        <div class="theme-div center">
+            <div class="title-top center">
+                <strong>Top 10 gerechten</strong>
+            </div>
+            <div class="list-div">
+                <div class="center">
+                    <ul>
+                        <li>Moksi alesi</li>
+                        <li>Jollof</li>
+                        <li>Stampot</li>
+                        <li>Egg fried rice</li>
+                        <li>Thaise groene curry</li>
+                    </ul>
+                </div>
+                <div class="center">
+                    <ul>
+                        <li>vlees</li>
+                        <li>Vegan</li>
+                        <li>Halal</li>
+                        <li>Keto</li>
+                        <li>Laag in calorien</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="more-categories right-aligned">
+                <a href="#">Bekijk alle themas</a>
+            </div>
+        </div>
+    </div>
+    <div class="small">
+        <div class="carousel">
+            <img class="carousel-image" src="../static/images/pic1.jpg" alt="Image 1">
+            <img class="carousel-image" src="../static/images/pic2.jpg" alt="Image 2">
+            <img class="carousel-image" src="../static/images/pic3.jpg" alt="Image 3">
+            <img class="carousel-image" src="../static/images/pic4.jpg" alt="Image 4">
+            <div class="carousel-text">
+                
+            </div>
+        </div>
     </div>
 </div>
 
-<script>
-    // JavaScript code to implement carousel functionality
-    const carouselImages = document.querySelectorAll('.carousel-image');
-    let currentIndex = 0;
-    carouselImages[currentIndex].style.display = 'block';
-
-    setInterval(() => {
-        carouselImages[currentIndex].style.display = 'none';
-        currentIndex = (currentIndex + 1) % carouselImages.length;
+    <script>
+        // JavaScript code to implement carousel functionality
+        const carouselImages = document.querySelectorAll('.carousel-image');
+        let currentIndex = 0;
         carouselImages[currentIndex].style.display = 'block';
-    }, 3000);
-</script>
-{% endblock %}
+
+        setInterval(() => {
+            carouselImages[currentIndex].style.display = 'none';
+            currentIndex = (currentIndex + 1) % carouselImages.length;
+            carouselImages[currentIndex].style.display = 'block';
+        }, 3000);
+    </script>
+</body>
+</html>

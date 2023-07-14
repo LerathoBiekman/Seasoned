@@ -1,7 +1,124 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Quicksand', sans-serif;
+    color: sienna;
+}
+
+h1 {
+    font-weight: bold;
+    text-shadow: 2px;
+    font-size: 70px;
+}
+
+.main-div {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+/*Container for the left part of the page*/
+.large {
+    flex: 5;
+    background-color: lightyellow;
+    height: 90vh;
+    overflow: hidden;
+    flex-direction: column;
+    padding: 5vh;
+}
+
+.large div {
+    width: 100%;
+    display: flex;
+}
+
+/*Container for the right part on the page*/
+.small {
+    flex: 3;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*repeated styles*/
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-aligned {
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+/*Styling for title*/
+.title-div {
+    flex: 2;
+    height: 15%;
+}
+
+/*Styling for subtitle*/
+.subtitle-div {
+    flex: 1;
+    height: 5%;
+}
+
+.subtitle-div a{
+    font-size: 25px;
+}
+
+/*Styling for middle of the page. the search bar and text*/
+.search-bar-div {
+    flex: 3;
+    height: 50%;
+    flex-direction: column;
+}
+
+.search-bar {
+    width: 80%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*Styling for the bottom of the page. the navigation to the diffrent themes*/
+.theme-div {
+    flex: 2;
+    height: 30%;
+    flex-direction: column;
+}
+
+.list-div{
+    display: flex;
+    
+}
+
+/*Styling for image carousel on the right side*/
 .carousel {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 100vh;
     overflow: hidden;
 }
 
