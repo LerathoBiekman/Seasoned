@@ -114,6 +114,18 @@ h1 {
     
 }
 
+.theme-div a {
+    text-decoration: none;
+    color: sienna;
+    padding: 10px
+}
+
+.theme-div a:hover {
+    background-color: sienna;
+    color: lightyellow;
+    border-radius: 5px;
+}
+
 /*Styling for image carousel on the right side*/
 .carousel {
     position: relative;

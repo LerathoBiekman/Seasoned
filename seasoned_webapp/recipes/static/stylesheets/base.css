@@ -34,7 +34,7 @@ body, html {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
-    color: black;
+    color: sienna;
     font-weight: bold;
     border: none;
     border-radius: 10px;
@@ -43,12 +43,15 @@ body, html {
 }
 
 .buttons a:hover {
-    color: sienna;
+    color: lightyellow;
+    background-color: sienna;
+
 }
 
-.seasoned {
+.seasoned a{
     color: sienna;
     font-weight: bold;
     font-size: 40px;
     margin-right: 30px;
+    text-decoration: none;
 }

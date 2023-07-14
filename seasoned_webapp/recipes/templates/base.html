@@ -13,13 +13,13 @@
             <img src="path/to/logo.png" alt="Logo">
         </div>
         <div class="buttons">
-            <a href="/recipes/">Recepten</a>
+            <a href="{% url 'recipes' %}">Recepten</a>
             <a href="#">Ingredienten</a>
             <a href="#">news</a>
             <a href="#">reviews</a>
         </div>
         <div class="seasoned">
-            Seasoned
+            <a href="{% url 'home' %}">Seasoned</a>
         </div>
     </div>
     {% block content %}{% endblock %}
